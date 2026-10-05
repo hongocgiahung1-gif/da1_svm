@@ -3,4 +3,4 @@ uvicorn[standard]
 scikit-learn
 joblib
 pydantic
-gunicorn app:app
+gunicorn 
