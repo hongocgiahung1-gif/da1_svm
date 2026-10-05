@@ -3,6 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import joblib
 
+from fastapi import FastAPI
+from fastapi.responses import FileResponse
+
 model = joblib.load("svm_model.pkl")
 
 app = FastAPI(
@@ -37,7 +40,7 @@ species = {
 
 @app.get("/")
 def home():
-    return {"message": "Iris SVM API is running"}
+    return FileResponse("da1Hung.html")
 
 
 @app.get("/health")
